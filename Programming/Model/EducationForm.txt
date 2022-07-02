@@ -1,4 +1,4 @@
-public enum Form_of_training
+public enum EducationForm
 {
 Full-time,
 Absentee,

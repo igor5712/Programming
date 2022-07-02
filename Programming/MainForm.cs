@@ -13,12 +13,12 @@ namespace Programming
     public partial class MainForm : Form
     {
         private TabControl tabControl1;
-        private TextBox textBox1;
+        private TextBox IntValueBox;
         private ListBox ValuesListBox;
         private ListBox EnumsListBox;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private Label IntValue;
+        private Label ChooseValue;
+        private Label ChooseEnumination;
         private TabPage tabPage1;
 
         public MainForm()
@@ -30,12 +30,12 @@ namespace Programming
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.EnumsListBox = new System.Windows.Forms.ListBox();
+            this.IntValue = new System.Windows.Forms.Label();
+            this.ChooseValue = new System.Windows.Forms.Label();
+            this.ChooseEnumination = new System.Windows.Forms.Label();
+            this.IntValueBox = new System.Windows.Forms.TextBox();
             this.ValuesListBox = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -52,10 +52,10 @@ namespace Programming
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.IntValue);
+            this.tabPage1.Controls.Add(this.ChooseValue);
+            this.tabPage1.Controls.Add(this.ChooseEnumination);
+            this.tabPage1.Controls.Add(this.IntValueBox);
             this.tabPage1.Controls.Add(this.ValuesListBox);
             this.tabPage1.Controls.Add(this.EnumsListBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -66,61 +66,68 @@ namespace Programming
             this.tabPage1.Text = "Enums";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // EnumsListBox
+            // IntValue
             // 
-            this.EnumsListBox.FormattingEnabled = true;
-            this.EnumsListBox.ItemHeight = 16;
-            this.EnumsListBox.Location = new System.Drawing.Point(41, 61);
-            this.EnumsListBox.Name = "EnumsListBox";
-            this.EnumsListBox.Size = new System.Drawing.Size(120, 84);
-            this.EnumsListBox.TabIndex = 0;
-            this.EnumsListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.IntValue.AutoSize = true;
+            this.IntValue.Location = new System.Drawing.Point(543, 39);
+            this.IntValue.Name = "IntValue";
+            this.IntValue.Size = new System.Drawing.Size(59, 16);
+            this.IntValue.TabIndex = 5;
+            this.IntValue.Text = "Int value:";
+            // 
+            // ChooseValue
+            // 
+            this.ChooseValue.AutoSize = true;
+            this.ChooseValue.Location = new System.Drawing.Point(298, 39);
+            this.ChooseValue.Name = "ChooseValue";
+            this.ChooseValue.Size = new System.Drawing.Size(93, 16);
+            this.ChooseValue.TabIndex = 4;
+            this.ChooseValue.Text = "Choose value:";
+            this.ChooseValue.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // ChooseEnumination
+            // 
+            this.ChooseEnumination.AutoSize = true;
+            this.ChooseEnumination.Location = new System.Drawing.Point(41, 39);
+            this.ChooseEnumination.Name = "ChooseEnumination";
+            this.ChooseEnumination.Size = new System.Drawing.Size(134, 16);
+            this.ChooseEnumination.TabIndex = 3;
+            this.ChooseEnumination.Text = "Choose enumaration:";
+            // 
+            // IntValueBox
+            // 
+            this.IntValueBox.Location = new System.Drawing.Point(546, 61);
+            this.IntValueBox.Name = "IntValueBox";
+            this.IntValueBox.Size = new System.Drawing.Size(174, 22);
+            this.IntValueBox.TabIndex = 2;
+            this.IntValueBox.Text = "1";
+            this.IntValueBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ValuesListBox
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.ItemHeight = 16;
-            this.ValuesListBox.Location = new System.Drawing.Point(250, 61);
+            this.ValuesListBox.Location = new System.Drawing.Point(301, 61);
             this.ValuesListBox.Name = "ValuesListBox";
-            this.ValuesListBox.Size = new System.Drawing.Size(120, 84);
+            this.ValuesListBox.Size = new System.Drawing.Size(213, 308);
             this.ValuesListBox.TabIndex = 1;
             // 
-            // textBox1
+            // EnumsListBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(468, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "1";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Choose enumaration:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(250, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Choose value:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(465, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Int value:";
+            this.EnumsListBox.FormattingEnabled = true;
+            this.EnumsListBox.ItemHeight = 16;
+            this.EnumsListBox.Items.AddRange(new object[] {
+            "Color",
+            "EducationForm",
+            "Genre",
+            "Manufactures",
+            "Season",
+            "Weekday"});
+            this.EnumsListBox.Location = new System.Drawing.Point(41, 61);
+            this.EnumsListBox.Name = "EnumsListBox";
+            this.EnumsListBox.Size = new System.Drawing.Size(228, 308);
+            this.EnumsListBox.TabIndex = 0;
+            this.EnumsListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // MainForm
             // 

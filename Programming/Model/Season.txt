@@ -1,4 +1,4 @@
-public enum Time_of_year
+public enum Season
 {
 Winter,
 Spring,
