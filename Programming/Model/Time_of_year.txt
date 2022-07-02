@@ -1,0 +1,7 @@
+public enum Time_of_year
+{
+Winter,
+Spring,
+Summer,
+Fall
+}

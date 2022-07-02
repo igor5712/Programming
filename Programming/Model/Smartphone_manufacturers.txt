@@ -1,0 +1,8 @@
+public enum Smartphone_manufacturers
+{
+Alcatel,
+Digma,
+Samsung,
+Lenovo,
+Motorolla
+}

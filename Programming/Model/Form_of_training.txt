@@ -1,0 +1,7 @@
+public enum Form_of_training
+{
+Full-time,
+Absentee,
+Evening,
+Remote
+}
